@@ -1,0 +1,5 @@
+---
+# handlers file for db-tier
+
+- name: restart postgresql
+  service: "name={{ postgresql_daemon }} state=restarted sleep=5"
