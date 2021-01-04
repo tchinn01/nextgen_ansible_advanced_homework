@@ -1,11 +1,11 @@
  ---
 # tasks file for app-tier
-- name: install "{{ payload }}"
+- name: install {{ payload }}
   yum:
     name: "{{ payload }}"
     state: latest
 
-- name: enable "{{ payload }}" at boot
+- name: enable {{ payload }} at boot
   service:
     name: "{{ payload }}"
     enabled: yes
