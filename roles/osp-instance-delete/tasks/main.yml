@@ -3,13 +3,13 @@
  
 - name: Fetch Instance Info
   os_server_facts:
-    cloud: ospcloud
+    cloud: openstack
     region_name: RegionOne
   register: result
 
 - name: Delete instances
   os_server:
-    cloud: ospcloud
+    cloud: openstack
     name: "{{ item.name }}"
     state: absent
   loop: "{{result.ansible_facts.openstack_servers}}"

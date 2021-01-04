@@ -2,7 +2,7 @@
 # tasks file for osp.servers
 - name: Create new server instances and attaches them a network and passes metadata to the instance
   os_server:
-    cloud: ospcloud
+    cloud: openstack
     name: "{{ r_server.key }}"
     image: "{{ r_server.value.image }}"
     meta: "{{ r_server.value.meta|join(', ') }}"
@@ -25,7 +25,7 @@
 
 - name: Add floating IP to "{{ r_server.key }}"
   os_floating_ip:
-    cloud: ospcloud
+    cloud: openstack
     state: present
     reuse: yes
     server: "{{ r_server.key }}"
