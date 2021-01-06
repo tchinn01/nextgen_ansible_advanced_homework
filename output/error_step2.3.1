@@ -1,0 +1,11 @@
+Step 7 - launch playbook site-setup-prereqs.yaml
+Errored out in setting up Network:
+
+
+TASK [setup-workstation : Configuration of Public and Private Networks] ********************
+failed: [workstation-544e.dynamic.opentlc.com] (item={u'key': u'internal', u'value': {u'cloume': u'ospcloud', u'state': u'present', u'subnet_name': u'int_subnet', u'external': False, ur_network': u'20.20.20.0/24', u'network_name': u'int_network'}}) => {"ansible_loop_var": "it "changed": false, "item": {"key": "internal", "value": {"cidr_network": "20.20.20.0/24", "c_name": "ospcloud", "external": false, "network_name": "int_network", "state": "present", "st_name": "int_subnet"}}, "msg": "Cloud ospcloud was not found."}
+failed: [workstation-544e.dynamic.opentlc.com] (item={u'key': u'external', u'value': {u'cloume': u'ospcloud', u'state': u'present', u'subnet_name': u'ext_subnet', u'external': True, u'_network': u'10.10.10.0/24', u'network_name': u'ext_network'}}) => {"ansible_loop_var": "ite"changed": false, "item": {"key": "external", "value": {"cidr_network": "10.10.10.0/24", "clname": "ospcloud", "external": true, "network_name": "ext_network", "state": "present", "subname": "ext_subnet"}}, "msg": "Cloud ospcloud was not found."}
+
+PLAY RECAP *********************************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    ued=0    ignored=0
+workstation-544e.dynamic.opentlc.com : ok=22   changed=15   unreachable=0    failed=1    ski
