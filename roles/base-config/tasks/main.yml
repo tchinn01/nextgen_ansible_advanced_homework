@@ -13,6 +13,19 @@
     state: absent
   tags: ec2
 
+- name: Copy repo file to destination server 
+  copy:
+    src: files/open_three-tier-app.repo
+    dest: /etc/yum.repos.d/open_three-tier-app.repo
+    owner: root
+    group: root
+    mode: 0644
+  register: copyresult
+
+- name: Run Copy Report
+  debug:
+    var: copyresult
+
 - name: enable repos
   file:
     src: open_three-tier-app.repo
