@@ -9,9 +9,9 @@
     tags:
       - osp.smoke
 
-  - name: Pause for 5 minutes to check URL COnnection for cloud-user
+  - name: Pause for 10 minutes to check URL COnnection for cloud-user
     pause:
-      minutes: 5
+      minutes: 10
 
   - name: Curl website
     uri:
