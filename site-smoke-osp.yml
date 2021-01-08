@@ -9,6 +9,10 @@
     tags:
       - osp.smoke
 
+  - name: Pause for 5 minutes to check URL COnnection for cloud-user
+    pause:
+      minutes: 5
+
   - name: Curl website
     uri:
       url: "http://{{item.public_v4}}"
