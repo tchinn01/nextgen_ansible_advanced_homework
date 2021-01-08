@@ -4,7 +4,7 @@
 osp_networks:
   # Public Facing Network
   external:
-    cloud_name: ospcloud
+    cloud_name: openstack
     network_name: ext_network
     subnet_name: ext_subnet
     cidr_network: "10.10.10.0/24"
@@ -14,7 +14,7 @@ osp_networks:
 
   # Private Facing Network
   internal:
-    cloud_name: ospcloud
+    cloud_name: openstack
     network_name: int_network
     subnet_name: int_subnet
     cidr_network: "20.20.20.0/24"
@@ -24,7 +24,7 @@ osp_networks:
   # Public Facing Router connecting the two networks
 osp_router:
   router:
-    cloud_name: ospcloud
+    cloud_name: openstack
     state: present
     name: router
     network: ext_network
