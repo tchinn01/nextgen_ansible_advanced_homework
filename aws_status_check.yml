@@ -12,7 +12,8 @@
     delegate_to: localhost
     with_items:
       - "{{ inventory_hostname }}"
+    register: chktmp
 
   - name: Debug Var
     debug:
-      var: ansible_remote_tmp
+      var: chktmp
