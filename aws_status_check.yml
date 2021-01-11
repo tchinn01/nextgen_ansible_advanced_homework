@@ -1,7 +1,6 @@
 #- hosts: tag_AnsibleGroup_apps
-- hosts: 
+- hosts: localhost
   gather_facts: false
-  calhost
   tasks:
 #  - name: Check the instances status
 #    wait_for:
