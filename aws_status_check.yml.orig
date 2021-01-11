@@ -1,4 +1,4 @@
-- hosts: tag_AnsibleGroup_apps
+- hosts: all
   gather_facts: false
   tasks:
   - name: Check the instances status
