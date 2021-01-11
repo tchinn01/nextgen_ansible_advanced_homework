@@ -12,4 +12,7 @@
     delegate_to: localhost
     with_items:
       - "{{ inventory_hostname }}"
-        
+
+  - name: Debug Var
+    debug:
+      var: ansible_remote_tmp
