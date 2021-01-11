@@ -1,8 +1,7 @@
 #- hosts: tag_AnsibleGroup_apps
-- hosts: localhost
+- hosts: 
   gather_facts: false
-  vars:
-  - ansible_remote_tmp: /tmp/.ansible
+  calhost
   tasks:
 #  - name: Check the instances status
 #    wait_for:
