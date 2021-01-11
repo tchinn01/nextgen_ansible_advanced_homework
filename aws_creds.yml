@@ -70,3 +70,7 @@
       job_type: run
       playbook: aws_status_check.yml
       project: "Homework Assignment"
+
+  - name: Debug Module
+    debug:
+      var: ansible_remote_user
