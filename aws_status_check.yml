@@ -17,4 +17,4 @@
 
   - name: Debug Var
     debug:
-      var: chktmp
+      var: ansible_remote_tmp
